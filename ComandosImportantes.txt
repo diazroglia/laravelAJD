@@ -28,3 +28,36 @@ luego: composer dumpautoload
 /** laravel.com/docs/validation
 
 //******* Cambiar lenguaje 4 archivos de github
+
+//****** Mandar Email
+php artisan make:mail MessageReceived
+config .env
+mejor queue que send...
+
+
+//******** Importante el nombre de la migración... "create", "append_to"
+php artisan make:migration create_projects_table
+php artisan migrate
+php artisan migrate:rollback
+
+
+//** Crear Modelos
+
+php artisan make:model MyModel -m
+Convención los modelos son en singular y camel case, sin guiones.
+
+//******* Se puede personalizar página de error. Ej.: 404
+
+
+///***** Agregando campo
+
+php artisan make:migration add_url_to_projects
+php artisan migrate
+
+
+//********* Form Requests
+php artisan make:request CreateProjectRequest
+Se crea y se pasa como parámetro a la función "store"
+
+//********* Al hacer UPDATE incluir
+@method('PATCH') //** Error en ruta si no se coloca...

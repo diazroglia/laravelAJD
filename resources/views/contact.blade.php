@@ -13,7 +13,7 @@
 
 @endif -->
 
-<form action="{{route('contact')}}" method="post">
+<form action="{{route('messages.store')}}" method="post">
     @csrf
     <input name="name" placeholder="Nombre..." value="{{old('name')}}"><br>
     {!! $errors->first('name','<small>:message</small><br>')!!}
