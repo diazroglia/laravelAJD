@@ -1,0 +1,30 @@
+
+
+php artisan route:list
+
+//**** -i invoke
+//***** Si solo se quiere 1 método
+php artisan make:controller PortfolioController -i
+
+//**** -r crea los 7 metodos
+php artisan make:controller PortfolioController -r
+
+
+//********** -api excluye create y edit
+php artisan make:controller PortfolioController -api
+
+
+//*******Helpers.php
+Primero se agrega en composer.json en "autoload"
+        "files":["app/helpers.php"]
+luego: composer dumpautoload
+
+
+//***** Separar partes html
+  Se crea carpeta partials en views, se crea html y se incluye con:
+    @include('partials/nav')
+
+//******* Siempre agregar @csrf dentro de los formularios
+/** laravel.com/docs/validation
+
+//******* Cambiar lenguaje 4 archivos de github
